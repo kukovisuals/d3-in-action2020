@@ -1,0 +1,42 @@
+
+load -> format -> measure -> create -> update 
+
+2.1.4 Measuring Data 
+
+sorting data into minimum and maximum values
+
+
+2.2 DATA-BINDING
+
+ -> create -> 
+
+ 2.2.1 Selections and Bindings
+
+ Use selections to make changes to the structure and appearance of your webpage. You can also create and delete elements using selection.
+
+2.2.2 Accessing data with inline function 
+	
+	.attr("x", (d,i) => i * 10)
+  .attr("y", d => 100 - d);
+
+2.2.3 Integrating scale
+	
+	d3.scaleLinear() -> domain() indicates the values being mapped to range()
+
+	polylinear scales
+	var yScale = d3.scaleLinear().domain([0,100,1000,24500]).range([0,50,75,100]); 
+
+	if you want to set all such values to a maximum use the .clamp() function
+	var yScale = d3.scaleLinear()
+               .domain([0,100,500])
+               .range([0,50,100])
+               .clamp(true);
+
+
+2.3 DATA PRESENTATION STYLE, ATTRIBUTES, AND CONTENT
+
+# 2.3.1 Visualization from loaded data 
+	
+# 2.3.3 Enter, Update, Mergrge and Exit 
+
+In the case of SVG elements, only <svg>, <g>, and <text> can have child elements
